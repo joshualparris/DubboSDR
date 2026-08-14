@@ -19,6 +19,8 @@ namespace DubboSDR.App
         public event Action<double>? OnSignalStrengthUpdated;
         public event Action<string>? OnError;
         public event Action<string>? OnDebugInfoUpdated;
+        
+        public double LastSignalStrength { get; private set; }
 
         private uint _currentFreqHz = 93500000;
         private const uint SDR_SAMPLE_RATE = 960000; // 960 kS/s
@@ -221,6 +223,7 @@ namespace DubboSDR.App
                     
                     // Signal Strength 0-100 derived from 0.0 to 0.5 RMS typical range
                     double displaySignal = Math.Min(100, (rms / 0.3) * 100);
+                    LastSignalStrength = displaySignal;
                     OnSignalStrengthUpdated?.Invoke(displaySignal);
 
                     // Auto AGC Algorithm using supported gains

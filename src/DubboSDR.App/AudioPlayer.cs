@@ -1,5 +1,6 @@
 using System;
 using NAudio.Wave;
+using DubboSDR.App.Services.Streaming;
 
 namespace DubboSDR.App
 {
@@ -7,11 +8,14 @@ namespace DubboSDR.App
     {
         private WaveOutEvent _waveOut;
         private BufferedWaveProvider _waveProvider;
+        private AudioBroadcaster? _broadcaster;
 
         public TimeSpan BufferedDuration => _waveProvider?.BufferedDuration ?? TimeSpan.Zero;
 
-        public AudioPlayer(int sampleRate)
+        public AudioPlayer(int sampleRate, AudioBroadcaster? broadcaster = null)
         {
+            _broadcaster = broadcaster;
+            
             // Create a float wave format (mono)
             var format = WaveFormat.CreateIeeeFloatWaveFormat(sampleRate, 1);
             
@@ -51,7 +55,10 @@ namespace DubboSDR.App
 
         public void AddSamples(float[] samples)
         {
-            // Convert float[] to byte[] for NAudio
+            // Multicast to web streamers!
+            _broadcaster?.Broadcast(samples);
+
+            // Convert float[] to byte[] for local NAudio playback
             int byteCount = samples.Length * 4;
             byte[] bytes = new byte[byteCount];
             Buffer.BlockCopy(samples, 0, bytes, 0, byteCount);

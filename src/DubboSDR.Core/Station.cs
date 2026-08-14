@@ -13,6 +13,12 @@ namespace DubboSDR.Core
         [JsonPropertyName("mode")]
         public string Mode { get; set; } = "WFM";
 
+        [JsonPropertyName("sourceType")]
+        public string SourceType { get; set; } = "Internet";
+
+        [JsonPropertyName("hexColor")]
+        public string HexColor { get; set; } = "#808080";
+
         [JsonPropertyName("category")]
         public string Category { get; set; } = string.Empty;
 

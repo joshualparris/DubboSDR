@@ -1,183 +1,80 @@
 [
   {
-    "name": "Country Mix",
-    "frequencyHz": 87600000,
-    "mode": "WFM",
-    "bandwidthHz": 180000,
-    "category": "BroadcastFM",
-    "location": "Dubbo NSW",
-    "source": "Existing SDR++ Dubbo Radio list",
-    "showInKidsMode": false
-  },
-  {
-    "name": "Faith FM",
-    "frequencyHz": 87800000,
-    "mode": "WFM",
-    "bandwidthHz": 180000,
-    "category": "BroadcastFM",
-    "location": "Dubbo NSW",
-    "source": "Existing SDR++ Dubbo Radio list",
-    "showInKidsMode": false
-  },
-  {
-    "name": "Aussie FM",
-    "frequencyHz": 88000000,
-    "mode": "WFM",
-    "bandwidthHz": 180000,
-    "category": "BroadcastFM",
-    "location": "Dubbo NSW",
-    "source": "Existing SDR++ Dubbo Radio list",
-    "showInKidsMode": false
-  },
-  {
-    "name": "DCFM Dubbo Community Radio",
-    "frequencyHz": 88900000,
-    "mode": "WFM",
-    "bandwidthHz": 180000,
-    "category": "BroadcastFM",
-    "location": "Dubbo NSW",
-    "source": "Existing SDR++ Dubbo Radio list",
-    "showInKidsMode": false
-  },
-  {
-    "name": "Sky Sports Radio",
-    "frequencyHz": 90300000,
-    "mode": "WFM",
-    "bandwidthHz": 180000,
-    "category": "BroadcastFM",
-    "location": "Dubbo NSW",
-    "source": "Existing SDR++ Dubbo Radio list",
-    "showInKidsMode": false
-  },
-  {
-    "name": "Zoo FM - City",
-    "frequencyHz": 91100000,
-    "mode": "WFM",
-    "bandwidthHz": 180000,
-    "category": "BroadcastFM",
-    "location": "Dubbo NSW",
-    "source": "Existing SDR++ Dubbo Radio list",
-    "showInKidsMode": false
-  },
-  {
-    "name": "Zoo FM",
-    "frequencyHz": 92700000,
-    "mode": "WFM",
-    "bandwidthHz": 180000,
-    "category": "BroadcastFM",
-    "location": "Dubbo NSW",
-    "source": "Existing SDR++ Dubbo Radio list",
-    "showInKidsMode": true,
-    "kidsLabel": "Zoo FM",
-    "kidsIcon": "🦁"
-  },
-  {
-    "name": "Triple M Dubbo",
-    "frequencyHz": 93500000,
-    "mode": "WFM",
-    "bandwidthHz": 180000,
-    "category": "BroadcastFM",
-    "location": "Dubbo NSW",
-    "source": "Existing SDR++ Dubbo Radio list",
-    "showInKidsMode": true,
-    "kidsLabel": "Rock Music",
-    "kidsIcon": "🎸"
-  },
-  {
-    "name": "Dubbo's 94.3",
-    "frequencyHz": 94300000,
-    "mode": "WFM",
-    "bandwidthHz": 180000,
-    "category": "BroadcastFM",
-    "location": "Dubbo NSW",
-    "source": "Existing SDR++ Dubbo Radio list",
-    "showInKidsMode": false
-  },
-  {
-    "name": "ABC Western Plains",
-    "frequencyHz": 95900000,
-    "mode": "WFM",
-    "bandwidthHz": 180000,
-    "category": "BroadcastFM",
-    "location": "Dubbo NSW",
-    "source": "Existing SDR++ Dubbo Radio list",
-    "showInKidsMode": false
-  },
-  {
-    "name": "SBS Radio 2",
-    "frequencyHz": 100500000,
-    "mode": "WFM",
-    "bandwidthHz": 180000,
-    "category": "BroadcastFM",
-    "location": "Dubbo NSW",
-    "source": "Existing SDR++ Dubbo Radio list",
-    "showInKidsMode": false
-  },
-  {
-    "name": "ABC triple j",
+    "name": "Triple J (Dubbo)",
     "frequencyHz": 102300000,
     "mode": "WFM",
-    "bandwidthHz": 180000,
-    "category": "BroadcastFM",
-    "location": "Dubbo NSW",
-    "source": "Existing SDR++ Dubbo Radio list",
+    "sourceType": "Hybrid",
+    "category": "Ordinary Radio",
+    "hexColor": "#E21836",
     "showInKidsMode": true,
-    "kidsLabel": "Triple J",
-    "kidsIcon": "🥁"
+    "kidsLabel": "triple j",
+    "kidsIcon": "🥁",
+    "streamUrl": "https://live-radio01.mediahubaustralia.com/2TJW/mp3/"
+  },
+  {
+    "name": "ABC Kids Listen",
+    "frequencyHz": 0,
+    "mode": "Internet",
+    "sourceType": "Internet",
+    "category": "Kids",
+    "hexColor": "#FFC107",
+    "showInKidsMode": true,
+    "kidsLabel": "ABC Kids",
+    "kidsIcon": "🧸",
+    "streamUrl": "https://live-radio01.mediahubaustralia.com/XTDW/mp3/"
   },
   {
     "name": "ABC Classic",
     "frequencyHz": 105500000,
     "mode": "WFM",
-    "bandwidthHz": 180000,
-    "category": "BroadcastFM",
-    "location": "Dubbo NSW",
-    "source": "Existing SDR++ Dubbo Radio list",
+    "sourceType": "Hybrid",
+    "category": "Ordinary Radio",
+    "hexColor": "#4A148C",
     "showInKidsMode": true,
-    "kidsLabel": "Classical Music",
-    "kidsIcon": "🎻"
+    "kidsLabel": "Classic",
+    "kidsIcon": "🎻",
+    "streamUrl": "https://live-radio01.mediahubaustralia.com/2FMW/mp3/"
   },
   {
-    "name": "ABC NewsRadio",
-    "frequencyHz": 106300000,
+    "name": "Triple M Dubbo",
+    "frequencyHz": 93500000,
     "mode": "WFM",
-    "bandwidthHz": 180000,
-    "category": "BroadcastFM",
-    "location": "Dubbo NSW",
-    "source": "Existing SDR++ Dubbo Radio list",
-    "showInKidsMode": false
-  },
-  {
-    "name": "ABC Radio National",
-    "frequencyHz": 107900000,
-    "mode": "WFM",
-    "bandwidthHz": 180000,
-    "category": "BroadcastFM",
-    "location": "Dubbo NSW",
-    "source": "Existing SDR++ Dubbo Radio list",
-    "showInKidsMode": false
-  },
-  {
-    "name": "2DU",
-    "frequencyHz": 1251000,
-    "mode": "AM",
-    "bandwidthHz": 10000,
-    "category": "BroadcastAM",
-    "location": "Dubbo NSW",
-    "source": "Existing SDR++ Dubbo Radio list",
-    "showInKidsMode": false
-  },
-  {
-    "name": "ABC Kids listen",
-    "frequencyHz": 0,
-    "mode": "Internet",
-    "bandwidthHz": 0,
-    "category": "InternetAudio",
-    "location": "Internet",
-    "source": "Added for Kids Radio",
+    "sourceType": "SDR",
+    "category": "Ordinary Radio",
+    "hexColor": "#E32636",
     "showInKidsMode": true,
-    "kidsLabel": "Stories & Songs",
-    "kidsIcon": "🧸",
-    "streamUrl": "http://live-radio01.mediahubaustralia.com/AKW/mp3/"
+    "kidsLabel": "Triple M",
+    "kidsIcon": "🎸",
+    "streamUrl": null
+  },
+  {
+    "name": "Dubbo Amateur Repeater (VK2RCD)",
+    "frequencyHz": 146725000,
+    "mode": "NBFM",
+    "sourceType": "SDR",
+    "category": "Live SDR",
+    "hexColor": "#4CAF50",
+    "showInKidsMode": false,
+    "streamUrl": null
+  },
+  {
+    "name": "UHF CB Channel 40 (Highway)",
+    "frequencyHz": 477400000,
+    "mode": "NBFM",
+    "sourceType": "SDR",
+    "category": "Live SDR",
+    "hexColor": "#FF9800",
+    "showInKidsMode": false,
+    "streamUrl": null
+  },
+  {
+    "name": "ADS-B Aircraft Telemetry",
+    "frequencyHz": 1090000000,
+    "mode": "DATA",
+    "sourceType": "SDR",
+    "category": "Live SDR",
+    "hexColor": "#2196F3",
+    "showInKidsMode": false,
+    "streamUrl": null
   }
 ]

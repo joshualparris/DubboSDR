@@ -1,13 +1,13 @@
-# DubboSDR Progress
+# Project Progress
 
-This document tracks progress, test results, and milestones achieved for DubboSDR.
-
-## Milestone 1
-
-### Step 3: Raw IQ Acquisition
-* **Hardware:** Nooelec NESDR SMArt v5
-* **Frequency:** 93.5 MHz (Triple M Dubbo)
-* **Sample Rate:** 1.024 MS/s
-* **Result:** Captured 1,048,576 bytes synchronously.
-* **Stats:** Mean I: -0.11, Mean Q: 0.07, RMS magnitude: 144.50.
-* **Status:** SUCCESS. Capture is healthy with no significant DC offset and strong signal energy.
+- [x] Integrate P/Invoke RTL-SDR interface.
+- [x] Acquire raw I/Q samples cleanly.
+- [x] Implement robust FmDemodulator (Filter, Decimate, Discriminator, De-emphasis).
+- [x] Hook up NAudio buffer for local playback.
+- [x] Design "Explorer" and "Kids Radio" interfaces.
+- [x] Fix WPF visual tree bugs.
+- [x] Implement 14-step Thread-Safe Retuning (`TuneAsync`).
+- [x] Clean Repository and Push to GitHub.
+- [ ] Add ASP.NET Core streaming server (Kestrel).
+- [ ] Implement Vercel mobile web client.
+- [ ] End-to-end QR remote tuning and streaming.

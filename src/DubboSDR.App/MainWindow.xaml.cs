@@ -85,7 +85,7 @@ namespace DubboSDR.App
             }
         }
 
-        private void MainWindow_Closed(object sender, EventArgs e)
+        private void MainWindow_Closed(object? sender, EventArgs e)
         {
             _radioService?.Dispose();
         }
