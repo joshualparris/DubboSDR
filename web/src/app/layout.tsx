@@ -17,12 +17,16 @@ export const metadata: Metadata = {
   description: "Live RF Explorer and Radio for Dubbo",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#0f1115" />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

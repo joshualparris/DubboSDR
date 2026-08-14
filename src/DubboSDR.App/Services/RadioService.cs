@@ -1,7 +1,6 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Media;
 using DubboSDR.Core;
 using DubboSDR.App.Services.Streaming;
 
@@ -19,9 +18,11 @@ namespace DubboSDR.App.Services
         private Station? _currentStation;
         public Station? CurrentStation => _currentStation;
 
-        private CancellationTokenSource? _tuneCts;
-        private int _tuneRequestId = 0;
-        private MediaPlayer _internetPlayer;
+        private IAudioSource _internetSource;
+        private IAudioSource _sdrSource;
+        private IAudioSource? _activeSource;
+
+        private float _volume = 1.0f;
 
         public RadioService()
         {
@@ -30,58 +31,62 @@ namespace DubboSDR.App.Services
             AudioPlayer = new AudioPlayer(Demodulator.OutputSampleRate, Broadcaster);
             DeviceManager = new RadioDeviceManager(Demodulator, AudioPlayer);
             
-            // Internet stream player (WPF Native)
-            _internetPlayer = new MediaPlayer();
-            _internetPlayer.Volume = 1.0;
+            _internetSource = new InternetAudioSource();
+            _sdrSource = new SdrAudioSource(DeviceManager, AudioPlayer);
         }
 
         public bool Connect()
         {
-            return DeviceManager.Connect();
+            // Connect is mostly deferred to when SDR is requested, but we can allow pre-connect if needed
+            return true; 
         }
 
         public void Disconnect()
         {
-            DeviceManager.Disconnect();
+            _sdrSource.StopAsync().Wait();
         }
 
         public async Task<bool> TuneAsync(Station station)
         {
             _currentStation = station;
             
-            _tuneCts?.Cancel();
-            _tuneCts = new CancellationTokenSource();
-            var ct = _tuneCts.Token;
-            int reqId = Interlocked.Increment(ref _tuneRequestId);
+            if (_activeSource != null)
+            {
+                await _activeSource.StopAsync();
+                _activeSource = null;
+            }
 
             // Handle Internet Streams (Internet or Hybrid default)
             if (station.SourceType == "Internet" || station.SourceType == "Hybrid")
             {
-                DeviceManager.StopStreaming();
-                AudioPlayer.Stop();
-                
-                _internetPlayer.Stop();
                 if (!string.IsNullOrEmpty(station.StreamUrl))
                 {
-                    _internetPlayer.Open(new Uri(station.StreamUrl));
-                    _internetPlayer.Play();
+                    bool success = await _internetSource.StartAsync(station.StreamUrl);
+                    if (success)
+                    {
+                        _activeSource = _internetSource;
+                        _activeSource.SetVolume(_volume);
+                        OnStationChanged?.Invoke(station);
+                        return true;
+                    }
+                    else if (station.SourceType == "Hybrid")
+                    {
+                        Console.WriteLine("Internet stream failed. Falling back to SDR.");
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
-
-                OnStationChanged?.Invoke(station);
-                return true;
             }
 
             // Handle SDR (Live RF Explorer or manual fallback)
-            _internetPlayer.Stop(); // Ensure internet stream stops when SDR starts
-            Console.WriteLine($"Tune request {reqId}: {station.FrequencyHz}");
-
-            bool success = await DeviceManager.TuneAsync(station.FrequencyHz, reqId, ct);
-            
-            if (success && !ct.IsCancellationRequested)
+            bool sdrSuccess = await _sdrSource.StartAsync(station.FrequencyHz.ToString());
+            if (sdrSuccess)
             {
-                AudioPlayer.Play();
+                _activeSource = _sdrSource;
+                _activeSource.SetVolume(_volume);
                 OnStationChanged?.Invoke(station);
-                Console.WriteLine($"Tune {reqId} COMPLETE\n");
                 return true;
             }
             
@@ -90,39 +95,34 @@ namespace DubboSDR.App.Services
 
         public void SetVolume(float volume)
         {
-            AudioPlayer.SetVolume(volume);
-            _internetPlayer.Volume = Math.Clamp(volume, 0f, 1f);
+            _volume = volume;
+            _activeSource?.SetVolume(volume);
         }
 
         public void Pause()
         {
-            DeviceManager.StopStreaming();
-            AudioPlayer.Stop();
-            _internetPlayer.Pause();
+            _activeSource?.StopAsync();
         }
 
         public void Resume()
         {
-            if (_currentStation != null)
+            if (_currentStation != null && _activeSource != null)
             {
-                if (_currentStation.SourceType == "Internet" || _currentStation.SourceType == "Hybrid")
+                if (_activeSource == _internetSource)
                 {
-                    _internetPlayer.Play();
+                    _internetSource.StartAsync(_currentStation.StreamUrl);
                 }
                 else
                 {
-                    DeviceManager.StartStreaming();
-                    AudioPlayer.Play();
+                    _sdrSource.StartAsync(_currentStation.FrequencyHz.ToString());
                 }
             }
         }
 
         public void Dispose()
         {
-            _tuneCts?.Cancel();
-            DeviceManager?.Dispose();
-            AudioPlayer?.Dispose();
-            _internetPlayer?.Close();
+            _internetSource?.Dispose();
+            _sdrSource?.Dispose();
         }
     }
 }

@@ -124,10 +124,10 @@ namespace DubboSDR.App.Services.Streaming
                     },
                     amateur = new {
                         state = "Quiet",
-                        activeChannel = null,
-                        frequency = null,
-                        strength = null,
-                        duration = null
+                        activeChannel = (int?)null,
+                        frequency = (double?)null,
+                        strength = (string?)null,
+                        duration = (string?)null
                     },
                     adsb = new {
                         state = "Coming soon",
