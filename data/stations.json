@@ -1,0 +1,183 @@
+[
+  {
+    "name": "Country Mix",
+    "frequencyHz": 87600000,
+    "mode": "WFM",
+    "bandwidthHz": 180000,
+    "category": "BroadcastFM",
+    "location": "Dubbo NSW",
+    "source": "Existing SDR++ Dubbo Radio list",
+    "showInKidsMode": false
+  },
+  {
+    "name": "Faith FM",
+    "frequencyHz": 87800000,
+    "mode": "WFM",
+    "bandwidthHz": 180000,
+    "category": "BroadcastFM",
+    "location": "Dubbo NSW",
+    "source": "Existing SDR++ Dubbo Radio list",
+    "showInKidsMode": false
+  },
+  {
+    "name": "Aussie FM",
+    "frequencyHz": 88000000,
+    "mode": "WFM",
+    "bandwidthHz": 180000,
+    "category": "BroadcastFM",
+    "location": "Dubbo NSW",
+    "source": "Existing SDR++ Dubbo Radio list",
+    "showInKidsMode": false
+  },
+  {
+    "name": "DCFM Dubbo Community Radio",
+    "frequencyHz": 88900000,
+    "mode": "WFM",
+    "bandwidthHz": 180000,
+    "category": "BroadcastFM",
+    "location": "Dubbo NSW",
+    "source": "Existing SDR++ Dubbo Radio list",
+    "showInKidsMode": false
+  },
+  {
+    "name": "Sky Sports Radio",
+    "frequencyHz": 90300000,
+    "mode": "WFM",
+    "bandwidthHz": 180000,
+    "category": "BroadcastFM",
+    "location": "Dubbo NSW",
+    "source": "Existing SDR++ Dubbo Radio list",
+    "showInKidsMode": false
+  },
+  {
+    "name": "Zoo FM - City",
+    "frequencyHz": 91100000,
+    "mode": "WFM",
+    "bandwidthHz": 180000,
+    "category": "BroadcastFM",
+    "location": "Dubbo NSW",
+    "source": "Existing SDR++ Dubbo Radio list",
+    "showInKidsMode": false
+  },
+  {
+    "name": "Zoo FM",
+    "frequencyHz": 92700000,
+    "mode": "WFM",
+    "bandwidthHz": 180000,
+    "category": "BroadcastFM",
+    "location": "Dubbo NSW",
+    "source": "Existing SDR++ Dubbo Radio list",
+    "showInKidsMode": true,
+    "kidsLabel": "Zoo FM",
+    "kidsIcon": "🦁"
+  },
+  {
+    "name": "Triple M Dubbo",
+    "frequencyHz": 93500000,
+    "mode": "WFM",
+    "bandwidthHz": 180000,
+    "category": "BroadcastFM",
+    "location": "Dubbo NSW",
+    "source": "Existing SDR++ Dubbo Radio list",
+    "showInKidsMode": true,
+    "kidsLabel": "Rock Music",
+    "kidsIcon": "🎸"
+  },
+  {
+    "name": "Dubbo's 94.3",
+    "frequencyHz": 94300000,
+    "mode": "WFM",
+    "bandwidthHz": 180000,
+    "category": "BroadcastFM",
+    "location": "Dubbo NSW",
+    "source": "Existing SDR++ Dubbo Radio list",
+    "showInKidsMode": false
+  },
+  {
+    "name": "ABC Western Plains",
+    "frequencyHz": 95900000,
+    "mode": "WFM",
+    "bandwidthHz": 180000,
+    "category": "BroadcastFM",
+    "location": "Dubbo NSW",
+    "source": "Existing SDR++ Dubbo Radio list",
+    "showInKidsMode": false
+  },
+  {
+    "name": "SBS Radio 2",
+    "frequencyHz": 100500000,
+    "mode": "WFM",
+    "bandwidthHz": 180000,
+    "category": "BroadcastFM",
+    "location": "Dubbo NSW",
+    "source": "Existing SDR++ Dubbo Radio list",
+    "showInKidsMode": false
+  },
+  {
+    "name": "ABC triple j",
+    "frequencyHz": 102300000,
+    "mode": "WFM",
+    "bandwidthHz": 180000,
+    "category": "BroadcastFM",
+    "location": "Dubbo NSW",
+    "source": "Existing SDR++ Dubbo Radio list",
+    "showInKidsMode": true,
+    "kidsLabel": "Triple J",
+    "kidsIcon": "🥁"
+  },
+  {
+    "name": "ABC Classic",
+    "frequencyHz": 105500000,
+    "mode": "WFM",
+    "bandwidthHz": 180000,
+    "category": "BroadcastFM",
+    "location": "Dubbo NSW",
+    "source": "Existing SDR++ Dubbo Radio list",
+    "showInKidsMode": true,
+    "kidsLabel": "Classical Music",
+    "kidsIcon": "🎻"
+  },
+  {
+    "name": "ABC NewsRadio",
+    "frequencyHz": 106300000,
+    "mode": "WFM",
+    "bandwidthHz": 180000,
+    "category": "BroadcastFM",
+    "location": "Dubbo NSW",
+    "source": "Existing SDR++ Dubbo Radio list",
+    "showInKidsMode": false
+  },
+  {
+    "name": "ABC Radio National",
+    "frequencyHz": 107900000,
+    "mode": "WFM",
+    "bandwidthHz": 180000,
+    "category": "BroadcastFM",
+    "location": "Dubbo NSW",
+    "source": "Existing SDR++ Dubbo Radio list",
+    "showInKidsMode": false
+  },
+  {
+    "name": "2DU",
+    "frequencyHz": 1251000,
+    "mode": "AM",
+    "bandwidthHz": 10000,
+    "category": "BroadcastAM",
+    "location": "Dubbo NSW",
+    "source": "Existing SDR++ Dubbo Radio list",
+    "showInKidsMode": false
+  },
+  {
+    "name": "ABC Kids listen",
+    "frequencyHz": 0,
+    "mode": "Internet",
+    "bandwidthHz": 0,
+    "category": "InternetAudio",
+    "location": "Internet",
+    "source": "Added for Kids Radio",
+    "showInKidsMode": true,
+    "kidsLabel": "Stories & Songs",
+    "kidsIcon": "🧸",
+    "streamUrl": "http://live-radio01.mediahubaustralia.com/AKW/mp3/"
+  }
+]

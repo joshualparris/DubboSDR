@@ -1,0 +1,8 @@
+<Window x:Class="DubboSDR.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DubboSDR" Height="768" Width="1024" Background="#1E1E1E" Foreground="White"
+        WindowStartupLocation="CenterScreen"
+        KeyDown="Window_KeyDown">
+    <ContentControl x:Name="MainContent"/>
+</Window>

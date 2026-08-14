@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AB735A12-E5CE-4427-8B37-F1B62B6C7245}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DubboSDR.App", "src\DubboSDR.App\DubboSDR.App.csproj", "{405A86E6-F0FA-4C0E-AA90-6ED969315491}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DubboSDR.Core", "src\DubboSDR.Core\DubboSDR.Core.csproj", "{6C0D203C-BE43-464F-BC2B-37C276AB530D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DubboSDR.RtlSdr", "src\DubboSDR.RtlSdr\DubboSDR.RtlSdr.csproj", "{8293A267-D5C1-4176-B9E4-F47CFC8A4F38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{EEE9FA97-4128-4491-8680-1202D1D464AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DubboSDR.Tests", "tests\DubboSDR.Tests\DubboSDR.Tests.csproj", "{3C2F4789-4A49-4CC2-8FAC-23101421BDF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DubboSDR.Diagnostics", "src\DubboSDR.Diagnostics\DubboSDR.Diagnostics.csproj", "{59BAE2BC-236D-497E-AD49-98FA3A1AEFBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{405A86E6-F0FA-4C0E-AA90-6ED969315491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{405A86E6-F0FA-4C0E-AA90-6ED969315491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{405A86E6-F0FA-4C0E-AA90-6ED969315491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{405A86E6-F0FA-4C0E-AA90-6ED969315491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C0D203C-BE43-464F-BC2B-37C276AB530D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C0D203C-BE43-464F-BC2B-37C276AB530D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C0D203C-BE43-464F-BC2B-37C276AB530D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C0D203C-BE43-464F-BC2B-37C276AB530D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8293A267-D5C1-4176-B9E4-F47CFC8A4F38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8293A267-D5C1-4176-B9E4-F47CFC8A4F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8293A267-D5C1-4176-B9E4-F47CFC8A4F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8293A267-D5C1-4176-B9E4-F47CFC8A4F38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C2F4789-4A49-4CC2-8FAC-23101421BDF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C2F4789-4A49-4CC2-8FAC-23101421BDF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C2F4789-4A49-4CC2-8FAC-23101421BDF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C2F4789-4A49-4CC2-8FAC-23101421BDF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59BAE2BC-236D-497E-AD49-98FA3A1AEFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59BAE2BC-236D-497E-AD49-98FA3A1AEFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59BAE2BC-236D-497E-AD49-98FA3A1AEFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59BAE2BC-236D-497E-AD49-98FA3A1AEFBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{405A86E6-F0FA-4C0E-AA90-6ED969315491} = {AB735A12-E5CE-4427-8B37-F1B62B6C7245}
+		{6C0D203C-BE43-464F-BC2B-37C276AB530D} = {AB735A12-E5CE-4427-8B37-F1B62B6C7245}
+		{8293A267-D5C1-4176-B9E4-F47CFC8A4F38} = {AB735A12-E5CE-4427-8B37-F1B62B6C7245}
+		{3C2F4789-4A49-4CC2-8FAC-23101421BDF7} = {EEE9FA97-4128-4491-8680-1202D1D464AA}
+		{59BAE2BC-236D-497E-AD49-98FA3A1AEFBC} = {AB735A12-E5CE-4427-8B37-F1B62B6C7245}
+	EndGlobalSection
+EndGlobal

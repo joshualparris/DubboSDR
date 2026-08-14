@@ -1,0 +1,41 @@
+# .NET / C#
+bin/
+obj/
+Publish/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vscode/
+
+# Audio / Diagnostics
+*.wav
+diagnostics/
+
+# Dependencies / Third-Party
+sdrpp_windows_x64/
+*.zip
+nesdr_driver_installer_for_windows.exe
+native/
+*.dll
+
+# Allow specific native components required for build
+!src/DubboSDR.App/native/
+!src/DubboSDR.App/native/libusb-1.0.dll
+!src/DubboSDR.App/native/pthreadVC2.dll
+!src/DubboSDR.App/native/rtlsdr.dll
+!src/DubboSDR.RtlSdr/native/
+!src/DubboSDR.RtlSdr/native/libusb-1.0.dll
+!src/DubboSDR.RtlSdr/native/pthreadVC2.dll
+!src/DubboSDR.RtlSdr/native/rtlsdr.dll
+
+# Web
+web/node_modules/
+web/.next/
+web/out/
+web/build/
+web/.env*.local
+
+# OS
+.DS_Store
+Thumbs.db
